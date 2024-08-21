@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@Root/*": ["."],
+      "@Admin/*": ["Admin/*"],
+      "@User/*": ["User/*"],
+      "@Models/*": ["Models/*"],
+      "@Routes/*": ["Routes/*"],
+      "@Utils/*": ["Utils/*"]
+    }
+  }
+}
