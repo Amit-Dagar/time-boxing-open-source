@@ -21,7 +21,7 @@ app.use(morgan("dev")); // log requests to the console
 require("@Utils/Config").initMongoDB();
 
 // handle server REST API requests
-app.use("/", require("@Routes/index"));
+app.use("/api", require("@Routes/index"));
 
 // handle server(404) errors
 app.use((req, res, next) => {
