@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const adminRoutes = require("@Admin/Routes");
+const userRoutes = require("@User/Routes");
 const helper = require("@Utils/Helper");
 const tryCatch = helper.tryCatch;
 
@@ -11,5 +13,10 @@ router.get(
     });
   })
 );
+
+// admin routes
+router.use("/admin", adminRoutes);
+// user routes
+router.use("/user", userRoutes);
 
 module.exports = router;
