@@ -14,6 +14,7 @@ const app = express();
 
 // app middlewares
 app.use(cors());
+app.use(express.json());
 app.disable("x-powered-by"); // disable x-powered-by header
 app.use(morgan("dev")); // log requests to the console
 
@@ -21,7 +22,7 @@ app.use(morgan("dev")); // log requests to the console
 require("@Utils/Config").initMongoDB();
 
 // handle server REST API requests
-app.use("/", require("@Routes/index"));
+app.use("/v1", require("@Routes/index"));
 
 // handle server(404) errors
 app.use((req, res, next) => {

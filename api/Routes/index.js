@@ -12,4 +12,7 @@ router.get(
   })
 );
 
+// main api routes
+router.use("/admin", require("@Admin/Routes"));
+
 module.exports = router;
